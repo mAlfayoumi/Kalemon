@@ -11,6 +11,6 @@ public class Test {
     }
     public  String Hello3 ()
     {
-        return  "Heelo+1";
+        return  "Heelo+1+2";
     }
 }
