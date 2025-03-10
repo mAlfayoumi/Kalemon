@@ -9,4 +9,8 @@ public class Test {
     {
         return "Hello Kalemon2!";
     }
+    public  String Hello3 ()
+    {
+        return  "Heelo3";
+    }
 }
