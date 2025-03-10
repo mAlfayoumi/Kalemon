@@ -13,4 +13,8 @@ public class Test {
     {
         return  "Heelo Last Update12";
     }
+    public  String Hello4 ()
+    {
+        return  "Heelo Last Update 4";
+    }
 }
