@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Registration Suite</th></tr>
+<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">16</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">118,201</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Registration Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.Kalemon.tests.RegistrationTest</td><td><a href="#m0">validRegisterInValidOtp</a></td><td rowspan="1">1741183399356</td><td rowspan="1">1590</td></tr><tr><th colspan="4">Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">org.Kalemon.tests.LoginTest</td><td><a href="#m1">checkUserValidity</a></td><td rowspan="1">1741183482360</td><td rowspan="1">1343</td></tr><tr class="passedeven"><td><a href="#m2">invalidLogin</a></td><td rowspan="1">1741183476270</td><td rowspan="1">424</td></tr><tr class="passedeven"><td><a href="#m3">isRegistrationPhoneNumber</a></td><td rowspan="1">1741183494909</td><td rowspan="1">1218</td></tr><tr class="passedeven"><td><a href="#m4">isValidPhoneNumber</a></td><td rowspan="1">1741183488998</td><td rowspan="1">413</td></tr><tr class="passedeven"><td><a href="#m5">validLogin</a></td><td rowspan="1">1741183469132</td><td rowspan="1">1632</td></tr><tr class="passedeven"><td><a href="#m6">verifyPhoneForPasswordChange</a></td><td rowspan="1">1741183502688</td><td rowspan="1">1160</td></tr><tr class="passedodd"><td rowspan="10">org.Kalemon.tests.RegistrationTest</td><td><a href="#m7">checkMinLength</a></td><td rowspan="1">1741183450123</td><td rowspan="1">531</td></tr><tr class="passedodd"><td><a href="#m8">checkPasswordsMatch</a></td><td rowspan="1">1741183462884</td><td rowspan="1">677</td></tr><tr class="passedodd"><td><a href="#m9">checkUserExists</a></td><td rowspan="1">1741183456083</td><td rowspan="1">1383</td></tr><tr class="passedodd"><td><a href="#m10">isDuplicateName</a></td><td rowspan="1">1741183443173</td><td rowspan="1">1306</td></tr><tr class="passedodd"><td><a href="#m11">isValidLongName</a></td><td rowspan="1">1741183421430</td><td rowspan="1">1909</td></tr><tr class="passedodd"><td><a href="#m12">isValidPhoneNumber</a></td><td rowspan="1">1741183415292</td><td rowspan="1">618</td></tr><tr class="passedodd"><td><a href="#m13">validRegister</a></td><td rowspan="1">1741183391610</td><td rowspan="1">2068</td></tr><tr class="passedodd"><td><a href="#m14">validRegisterValidOtp</a></td><td rowspan="1">1741183406450</td><td rowspan="1">3210</td></tr><tr class="passedodd"><td><a href="#m15">verifyValidNameCredentials</a></td><td rowspan="1">1741183429105</td><td rowspan="1">1264</td></tr><tr class="passedodd"><td><a href="#m16">verifyValidPassword</a></td><td rowspan="1">1741183436059</td><td rowspan="1">698</td></tr></tbody>
+</table>
+<h2>Regression Test Cases</h2><h3 id="m0">org.Kalemon.tests.RegistrationTest#validRegisterInValidOtp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary-k-blue-solid-hover focus:bg-primary-k-blue-solid-focus disabled:bg-primary-k-blue-disable hover:text-white focus:text-white disabled:text-white px-4 py-2 h-full w-full rounded text-center text-[14px] font-normal tracking-normal text-white bg-primary-k-blue-disable&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (756, 660). Other element would receive the click: &lt;div class=&quot;h-[45px]&quot;&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=133.0.3065.82)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [3e3392f42dc0c3321e0b0eef3d839969, clickElement {id=f.0EF28065F61BC3E58176732AF12730A5.d.CABB09B30A4A899A42ED362510323E8A.e.1657}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:52227}, msedge: {msedgedriverVersion: 133.0.3065.92 (e8591772eda3..., userDataDir: C:\Users\CYBORG\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52227/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (3e3392f42dc0c3321e0b0eef3d839969)] -&gt; xpath: //form/div[3]/button
+]
+Session ID: 3e3392f42dc0c3321e0b0eef3d839969
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.kalemon.pages.PageBase.Clicking(PageBase.java:24)
+	at org.kalemon.pages.RegistrationPage.ClickOnRegisterButton(RegistrationPage.java:93)
+	at org.Kalemon.tests.RegistrationTest.validRegisterInValidOtp(RegistrationTest.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.Kalemon.tests.LoginTest#checkUserValidity</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">org.Kalemon.tests.LoginTest#invalidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.Kalemon.tests.LoginTest#isRegistrationPhoneNumber</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">org.Kalemon.tests.LoginTest#isValidPhoneNumber</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">org.Kalemon.tests.LoginTest#validLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">org.Kalemon.tests.LoginTest#verifyPhoneForPasswordChange</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">org.Kalemon.tests.RegistrationTest#checkMinLength</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">org.Kalemon.tests.RegistrationTest#checkPasswordsMatch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">org.Kalemon.tests.RegistrationTest#checkUserExists</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">org.Kalemon.tests.RegistrationTest#isDuplicateName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">org.Kalemon.tests.RegistrationTest#isValidLongName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">org.Kalemon.tests.RegistrationTest#isValidPhoneNumber</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">org.Kalemon.tests.RegistrationTest#validRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">org.Kalemon.tests.RegistrationTest#validRegisterValidOtp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">org.Kalemon.tests.RegistrationTest#verifyValidNameCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">org.Kalemon.tests.RegistrationTest#verifyValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

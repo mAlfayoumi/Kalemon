@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Registration Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression Test Cases(failed)">
+    <classes>
+      <class name="org.Kalemon.tests.RegistrationTest">
+        <methods>
+          <include name="validRegisterInValidOtp"/>
+          <include name="setup"/>
+          <include name="quitPage"/>
+        </methods>
+      </class> <!-- org.Kalemon.tests.RegistrationTest -->
+    </classes>
+  </test> <!-- Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Registration Suite] -->
