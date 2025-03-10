@@ -5,4 +5,8 @@ public class Test {
     {
         return "Hello Kalemon!";
     }
+    public  String Hello2 ()
+    {
+        return "Hello Kalemon2!";
+    }
 }
