@@ -1,5 +1,6 @@
 package org.Kalemon.tests;
 
+import io.qameta.allure.Description;
 import org.kalemon.pages.ForgotPasswordPage;
 import org.kalemon.pages.HomePage;
 import org.kalemon.pages.LoginPage;
@@ -12,6 +13,7 @@ public class ForgotPasswordTest extends TestBase {
     private HomePage homePage;
     private LoginPage loginPage;
 
+    @Description("verify Phone For Password Change")
 
     @Test(priority = 1, dataProvider = "verifyPhoneForPasswordChange")
     public void verifyPhoneForPasswordChange(String Phone_Number) {

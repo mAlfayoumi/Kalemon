@@ -1,6 +1,7 @@
 package org.Kalemon.tests;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.kalemon.data.CourseData;
 import org.kalemon.pages.ReadExcelData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -32,8 +33,8 @@ public class TestBase {
 
 
     // All Data Provider that Used on Pages
-    @DataProvider(name = "validRegisterInValidOtpTestData")
-    public Object[][] validRegisterInValidOtpTestData() throws IOException, InvalidFormatException {
+    @DataProvider(name = "validRegisterInValidOtp")
+    public Object[][] validRegisterInValidOtp() throws IOException, InvalidFormatException {
         ReadExcelData readExcelData = new ReadExcelData();
         String SheetName = "validRegisterInValidOtp.xlsx";
         return readExcelData.ReadSheet(SheetName);
@@ -105,12 +106,22 @@ public class TestBase {
         return readExcelData.ReadSheet(SheetName);
     }
 
+    @DataProvider(name = "validRegisterValidLogin")
+    public Object[][] validRegisterValidLogin() throws IOException, InvalidFormatException {
+        ReadExcelData readExcelData = new ReadExcelData();
+        String SheetName = "validRegisterValidLogin.xlsx";
+        return readExcelData.ReadSheet(SheetName);
+    }
+
     @DataProvider(name = "checkPasswordsMatch")
     public Object[][] checkPasswordsMatch() throws IOException, InvalidFormatException {
         ReadExcelData readExcelData = new ReadExcelData();
         String SheetName = "checkPasswordsMatch.xlsx";
         return readExcelData.ReadSheet(SheetName);
     }
+
+
+
 
     @DataProvider(name = "validLogin")
     public Object[][] validLogin() throws IOException, InvalidFormatException {
@@ -176,6 +187,59 @@ public class TestBase {
         String SheetName = "isPasswordSameAsOld.xlsx";
         return readExcelData.ReadSheet(SheetName);
     }
+
+//    @DataProvider(name = "validCourses")
+//    public Object[][] validCourses() throws IOException, InvalidFormatException {
+//        ReadExcelData readExcelData = new ReadExcelData();
+//        String SheetName = "validCourses.xlsx";
+//        Object[][] data = readExcelData.ReadSheet(SheetName);
+//
+//        // Print out the data to verify
+//        for (Object[] row : data) {
+//            for (Object val : row) {
+//                System.out.print(val + "\t");
+//            }
+//            System.out.println();
+//        }
+//
+//        return data;
+//    }
+//
+
+    @DataProvider(name = "validCourses")
+    public Object[][] validCourses() throws IOException, InvalidFormatException {
+        ReadExcelData readExcelData = new ReadExcelData();
+        String SheetName = "validCourses.xlsx";
+        Object[][] rawData = readExcelData.ReadSheet(SheetName);
+
+        Object[][] courseDataArray = new Object[rawData.length][1];
+
+        for (int i = 0; i < rawData.length; i++) {
+            Object[] row = rawData[i];
+            CourseData course = new CourseData(
+                    (String) row[0], // phoneNumber
+                    (String) row[1], // password
+                    (String) row[2], // titleAR
+                    (String) row[3], // titleEN
+                    (String) row[4], // subTitleAR
+                    (String) row[5], // subTitleEN
+                    (String) row[6], // descriptionAR
+                    (String) row[7], // descriptionEN
+                    (int) row[8],    // level
+                    (int) row[9],    // courseStatus
+                    (String) row[10],// price
+                    (String) row[11],// requirements
+                    (String) row[12],// targetAudience
+                    (String) row[13],// learningOutcomes
+                    (String) row[14],// sectionName
+                    (String) row[15] // lessonName
+            );
+            courseDataArray[i][0] = course;
+        }
+
+        return courseDataArray;
+    }
+
 
 
 

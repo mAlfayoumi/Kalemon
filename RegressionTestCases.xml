@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Registration Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+
     <test verbose="2" preserve-order="true" name="Regression Test Cases">
         <classes>
+        <class name="org.Kalemon.tests.LoginTest"/>
             <class name="org.Kalemon.tests.RegistrationTest"/>
-            <class name="org.Kalemon.tests.LoginTest"/>
-            <class name="org.Kalemon.tests.ForgotPasswordTest"/>
+        <class name="org.Kalemon.tests.ForgotPasswordTest"/>
+           <class name="org.Kalemon.tests.LoginTest"/>
+         <class name="org.Kalemon.tests.CoursesTest"/>
         </classes>
     </test>
 </suite>

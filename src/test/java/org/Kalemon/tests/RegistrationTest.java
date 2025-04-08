@@ -1,12 +1,16 @@
 package org.Kalemon.tests;
 
+import io.qameta.allure.testng.AllureTestNg;
 import org.kalemon.pages.HomePage;
 import org.kalemon.pages.RegistrationPage;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 
-
+@Listeners({AllureTestNg.class})
 public class  RegistrationTest extends TestBase {
 
 
@@ -48,7 +52,7 @@ public class  RegistrationTest extends TestBase {
     }
 
 
-    @Test(priority = 3, dataProvider = "validRegisterInValidOtpTestData")
+    @Test(priority = 3, dataProvider = "validRegisterInValidOtp")
     public void validRegisterInValidOtp(String Name, String Phone_Number, String Password,
                                         String Password_Confirmation, String Otp){
         homePage = new HomePage(driver);
@@ -84,6 +88,7 @@ public class  RegistrationTest extends TestBase {
 
 
     @Test(priority = 5, dataProvider = "isValidLongName")
+
     public void isValidLongName(String Phone_Number, String Password,
                                 String Password_Confirmation) {
         homePage = new HomePage(driver);
@@ -96,6 +101,7 @@ public class  RegistrationTest extends TestBase {
         registrationPage.ClickOnRegisterButton();
         Assert.assertEquals(registrationPage.getActualTextLongName(), "The name field must not be greater than 255 characters.");
     }
+
 
 
     @Test(priority = 6, dataProvider = "verifyValidNameCredentials")
@@ -170,7 +176,7 @@ public class  RegistrationTest extends TestBase {
         registrationPage.EnterPasswordConfirmation(Password_Confirmation);
         registrationPage.ClickOnRegisterButton();
         Assert.assertEquals(registrationPage.getActualUserExists(), "User already exists");
-    }
+        }
 
 
     @Test(priority = 11, dataProvider = "checkPasswordsMatch")
@@ -188,7 +194,7 @@ public class  RegistrationTest extends TestBase {
 
 
 
-    @Test(priority = 12, dataProvider = "validRegisterValidOtp")
+    @Test(priority = 12, dataProvider = "validRegisterValidLogin")
     public void validRegisterValidLogin(String Name, String Phone_Number, String Password,
                                       String Password_Confirmation, String Otp) {
         homePage = new HomePage(driver);

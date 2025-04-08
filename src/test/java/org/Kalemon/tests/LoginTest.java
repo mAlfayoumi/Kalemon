@@ -1,8 +1,12 @@
 package org.Kalemon.tests;
+import io.qameta.allure.Description;
+import io.qameta.allure.testng.AllureTestNg;
 import org.kalemon.pages.HomePage;
 import org.kalemon.pages.LoginPage;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import io.qameta.allure.Step;
 
 
 public class LoginTest extends TestBase {
@@ -11,10 +15,13 @@ public class LoginTest extends TestBase {
     private LoginPage loginPage;
     private HomePage homePage;
 
-    @Test(priority = 1, dataProvider = "validLogin")
+
+ // Apply listener at the class level
+ @Description("Login with valid credentials")
+ @Test(priority = 1, dataProvider = "validLogin")
     public void validLogin( String Phone_Number, String Password) {
         homePage = new HomePage(driver);
-        loginPage = homePage.clickOnLoginButton();
+        loginPage = homePage.clickOnLoginButton(    );
         loginPage.EnterPhoneNumber(Phone_Number);
         loginPage.EnterPassword(Password);
         loginPage.ClickOnLoginButton();
