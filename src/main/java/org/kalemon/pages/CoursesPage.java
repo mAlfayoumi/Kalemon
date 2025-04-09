@@ -26,8 +26,7 @@ public class CoursesPage extends PageBase {
     By SaveTitleLessonButton = By.xpath("//button[contains(text(), 'Save')]\n");
     By SaveLessonButton= By.xpath("//button[contains(@class, 'bg-primary-k-blue') and text()='Save']\n");
     By SaveAsPublishedButton = By.xpath("//button[text()='Publish']\n");
-    By BasicInfoTap= By.xpath("//div[contains(text(), 'Basic Info')]\n");
-
+    By BasicInfoTap = By.xpath("//div[contains(text(), 'Basic Info')]");
 
     // All Fields Used when create the courses
     By titleAR = By.xpath("//input[@placeholder=\"أدخل اسم الدورة بالعربي\"]\n");
@@ -49,6 +48,15 @@ public class CoursesPage extends PageBase {
     By videoLesson = By.xpath("//label[.//p[text()='Add video']]\n");
     By PublishedSuccess = By.xpath("//div[contains(text(), 'The course creation process will finish shortly')]\n");
     By MessageTitleAR = By.xpath("//p[contains(text(), 'title ar field is required')]\n");
+    By MessageTitleEN = By.xpath("//p[contains(text(), 'title en field is required')]\n");
+
+    By MessageSubTitleEN = By.xpath("//p[contains(text(), 'The subtitle en field is required.')]");
+    By MessageSubTitleAr = By.xpath("//p[contains(text(), 'subtitle ar field is required')]\n");
+    By MessageImage = By.xpath("//span[contains(text(), 'The photo field is required.')]\n");
+    By MessageVideo = By.xpath("//span[contains(text(), 'The video field is required.')]\n");
+    By MessageLevel = By.xpath("//p[contains(text(), 'The level id field is required.')]\n");
+    By MessageTopic = By.xpath("//span[contains(text(), 'The category topic ids field is required.')]\n");
+    By MessagePrice = By.xpath("//p[contains(text(), 'Price must be greater than or equal to 50')]");
 
     // Drop DownList
     By SelectLevel = By.xpath("//select[.//option[text()=\"Easy\"]]\n");
@@ -350,9 +358,58 @@ public void ClickOnExpandCollapse() {
         return getElementText(MessageTitleAR);
     }
 
+    public  String getTitleEnErrorMessage ()
+    {
+        return getElementText(MessageTitleEN);
+    }
+
+    public  String getSubTitleEnErrorMessage ()
+    {
+        return getElementText(MessageSubTitleEN);
+    }
+
+    public  String getSubTitleArErrorMessage ()
+    {
+        return getElementText(MessageSubTitleAr);
+    }
+
+    public  String getImageErrorMessage ()
+    {
+        return getElementText(MessageImage);
+    }
+
+    public  String getVideoErrorMessage ()
+    {
+        return getElementText(MessageVideo);
+    }
+
+    public  String getLevelErrorMessage ()
+    {
+        return getElementText(MessageLevel);
+    }
+
+    public  String getTopicErrorMessage ()
+    {
+        return getElementText(MessageTopic);
+    }
+
+    public  String getPriceErrorMessage ()
+    {
+        return getElementText(MessagePrice);
+    }
+
+
     public void ClickOnBasicInfo() {
-        FiledBasicInfoElement = driver.findElement(BasicInfoTap);
-        PageBase.Clicking(FiledBasicInfoElement);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement basicInfoElement = wait.until(ExpectedConditions.elementToBeClickable(BasicInfoTap));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", basicInfoElement);
+
+        try {
+            basicInfoElement.click();
+        } catch (ElementClickInterceptedException e) {
+
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", basicInfoElement);
+        }
     }
 
 }
